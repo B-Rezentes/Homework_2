@@ -41,6 +41,12 @@ int main() {
            {
                break;
            }
+
+           default: 
+           {
+               cout << "Please enter a number 1 - 5";
+               break;
+           }
        }
    }while(choice != EXIT);    
 

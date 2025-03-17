@@ -32,3 +32,19 @@ void Account::setBalance(float balance) {
 
    this->balance = balance;
 }
+
+int Account::getAccNumber() const {
+
+}
+
+string Account::getName() const {
+
+}
+
+float Account::getBalance() const {
+
+}
+
+void Account::displayAccounts() const {
+   
+}
