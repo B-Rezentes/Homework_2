@@ -78,7 +78,7 @@ int main() {
 
            case EXIT:
            {
-                cout << "Thank you for using this program." << endl << endl;
+                cout << endl << "Thank you for using this program." << endl << endl;
 
                 return 0;
            }

@@ -14,7 +14,8 @@ using namespace std;
 enum options {OPEN = 1, DEPOSIT = 2, WITHDRAW = 3, DISPLAY = 4, EXIT = 5};
 
 void displaySchoolInfo() {
-
+   
+   cout << endl;
    cout << "+-----------------------------------------------+" << endl;
    cout << "|             Project 2 - C++ Bank              |" << endl;
    cout << "|              Benjamin Rezentes                |" << endl;
