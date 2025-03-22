@@ -1,26 +1,23 @@
 #include "Account.h"
+#include <iostream>
+#include <iomanip>
+
+Account::Account(string& userName, float initialBalance) {
+
+   accNumber = new int;
+
+   *accNumber = nextAccNumber;
+
+   name = userName;
+
+   balance = initialBalance;
+
+   nextAccNumber++;
+}
 
 Account::~Account() {
 
    delete accNumber;
-}
-
-Account::Account() {
-
-   //accNumber = new int(accNumber);
-
-   name = "n/a";
-
-   balance = 0.0;
-}
-
-Account::Account(string& name, float balance) {
-
-   //this->accNumber = new int(accNumber);
-
-   this->name = name;
-
-   this->balance = balance;
 }
 
 void Account::setName(string name) {
@@ -33,18 +30,29 @@ void Account::setBalance(float balance) {
    this->balance = balance;
 }
 
+void Account::deposit(float amount) {
+
+   balance += amount;
+}
+
+void Account::withdraw(float amount) {
+
+      balance -= amount;
+}
+
 int Account::getAccNumber() const {
 
+   return *accNumber;
 }
 
 string Account::getName() const {
-
+   return name;
 }
 
 float Account::getBalance() const {
-
+   return balance;
 }
 
-void Account::displayAccounts() const {
-   
+int Account::getNextAccNumber() {
+   return nextAccNumber;
 }

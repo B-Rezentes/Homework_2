@@ -34,4 +34,12 @@ void displayMenu() {
    cout << "-------> ";
 }
 
+void addNewAcc(vector <Account>& accounts);
+
+void depositToAcc(vector <Account>& accounts);
+
+void withdrawFromAcc(vector <Account>& accounts);
+
+void displayAccounts(vector <Account> accounts);
+
 #endif

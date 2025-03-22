@@ -2,6 +2,7 @@
 #define ACCOUNT_H
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -13,26 +14,31 @@ class Account{
       static int nextAccNumber;
 
    public:
-      ~Account();
-
-      Account();
 
       Account(string& name, float balance);
 
       Account(const Account& other);
 
+      ~Account();
+
       void setName(string name);
 
-      void setBalance(float balance);
+      void setBalance(float amount);
 
-      int getAccNumber() const;
-      
+      void deposit(float amount);
+
+      void withdraw(float amount);
+
+      int getAccNumber() const;   
+
       string getName() const;
 
       float getBalance() const;
 
-      void displayAccounts () const;
-   
+      int getNextAccNumber();
+
 };
+
+int Account::nextAccNumber = 1000;
 
 #endif
