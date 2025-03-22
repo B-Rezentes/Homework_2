@@ -38,9 +38,9 @@ void displayMenu() {
 void addNewAcc(vector <Account>& accounts) {
    string name;
    float initialDeposit;
-	
-   cin .ignore();
-	
+
+   cin.ignore();
+
    cout << "Enter account holder's name: ";
    getline(cin, name);
 
