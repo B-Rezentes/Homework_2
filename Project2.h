@@ -38,7 +38,9 @@ void displayMenu() {
 void addNewAcc(vector <Account>& accounts) {
    string name;
    float initialDeposit;
-
+	
+   cin .ignore();
+	
    cout << "Enter account holder's name: ";
    getline(cin, name);
 
@@ -53,6 +55,7 @@ void addNewAcc(vector <Account>& accounts) {
    cout << "Account holder: " << newAccount.getName() << endl;
    cout << "Account number: " << newAccount.getAccNumber() << endl;
    cout << "Balance: $" << fixed << setprecision(2) << newAccount.getBalance();
+   cout << endl;
 }
 
 void depositToAcc(vector <Account>& accounts) {
