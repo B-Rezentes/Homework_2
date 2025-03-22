@@ -20,6 +20,8 @@ int main() {
 
            case OPEN:
            {
+                cin.ignore();
+
                 addNewAcc(accounts);
 
                 break;
