@@ -39,6 +39,5 @@ class Account{
 
 };
 
-int Account::nextAccNumber = 1000;
 
 #endif

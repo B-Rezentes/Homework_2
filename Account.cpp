@@ -56,3 +56,5 @@ float Account::getBalance() const {
 int Account::getNextAccNumber() {
    return nextAccNumber;
 }
+
+int Account::nextAccNumber = 1000;
