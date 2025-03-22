@@ -45,9 +45,13 @@ void addNewAcc(vector <Account>& accounts) {
    cout << "Enter initial deposit amount: $";
    cin >> initialDeposit;
 
+   cout << "Next Account Number: " << Account::getNextAccNumber() << endl;
+
    Account newAccount(name, initialDeposit);
 
    accounts.push_back(newAccount);
+
+   cout << "Number of accounts: " << accounts.size() << endl;
 
    cout << "New account created successfully." << endl;
    cout << "Account holder: " << newAccount.getName() << endl;
