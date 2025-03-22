@@ -147,8 +147,8 @@ void displayAccounts(vector <Account> accounts){
 
    for (size_t i = 0; i < accounts.size(); i++) {
       
-      cout << "Account: " << accounts[i].getAccNumber() << endl;
       cout << "Name: " << accounts[i].getName() << endl;
+      cout << "Account: " << accounts[i].getAccNumber() << endl;
       cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
       cout << endl;
 
