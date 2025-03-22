@@ -2,6 +2,8 @@
 #include <iostream>
 #include <iomanip>
 
+int Account::nextAccNumber = 1000;
+
 Account::Account(string& userName, float initialBalance) {
 
    accNumber = new int;
@@ -56,5 +58,3 @@ float Account::getBalance() const {
 int Account::getNextAccNumber() {
    return nextAccNumber;
 }
-
-int Account::nextAccNumber = 1000;
