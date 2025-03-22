@@ -143,10 +143,10 @@ void withdrawFromAcc(vector <Account>& accounts) {
 
 void displayAccounts(vector <Account> accounts){
    
-   cout << "Number of accounts: " << accounts.size() << endl;
+   cout << "Number of accounts: " << accounts.size() << endl << endl;
 
    for (size_t i = 0; i < accounts.size(); i++) {
-      
+
       cout << "Name: " << accounts[i].getName() << endl;
       cout << "Account: " << accounts[i].getAccNumber() << endl;
       cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
