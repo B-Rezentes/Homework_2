@@ -1,3 +1,8 @@
+// HOMEWORK PROJECT 2 - ACCOUNT DEFINITIONS
+// Benjamin Rezentes
+// Bmr0208
+// Benjaminrezentes@my.unt.edu
+
 #include "Account.h"
 #include <iostream>
 #include <iomanip>

@@ -1,3 +1,8 @@
+// HOMEWORK PROJECT 2 - ACCOUNT DECLARATIONS
+// Benjamin Rezentes
+// Bmr0208
+// Benjaminrezentes@my.unt.edu
+
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 

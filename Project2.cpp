@@ -1,3 +1,8 @@
+// HOMEWORK PROJECT 2 - MAIN FILE
+// Benjamin Rezentes
+// Bmr0208
+// Benjaminrezentes@my.unt.edu
+
 #include "Project2.h"
 #include <iostream>
 #include <iomanip>

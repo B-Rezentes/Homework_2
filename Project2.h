@@ -1,3 +1,8 @@
+// HOMEWORK PROJECT 2 - MAIN DEFINITIONS
+// Benjamin Rezentes
+// Bmr0208
+// Benjaminrezentes@my.unt.edu
+
 #ifndef PROJECT2_H
 #define PROJECT2_H
 
@@ -14,7 +19,7 @@ using namespace std;
 enum options {OPEN = 1, DEPOSIT = 2, WITHDRAW = 3, DISPLAY = 4, EXIT = 5};
 
 void displaySchoolInfo() {
-   
+
    cout << endl;
    cout << "+-----------------------------------------------+" << endl;
    cout << "|             Project 2 - C++ Bank              |" << endl;
