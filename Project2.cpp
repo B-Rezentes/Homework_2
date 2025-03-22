@@ -30,6 +30,7 @@ int main() {
                 if (accounts.empty()) {
 
                     cout << "There are no accounts open." << endl;
+                    
                     break;
                 }
                 
@@ -46,6 +47,7 @@ int main() {
                 if (accounts.empty()) {
                     
                     cout << "There are no accounts open." << endl;
+
                     break;
                 }
                 
@@ -62,6 +64,7 @@ int main() {
                 if (accounts.empty()) {
                     
                     cout << "There are no accounts open." << endl;
+
                     break;
                 }
 
@@ -76,12 +79,15 @@ int main() {
            case EXIT:
            {
                 cout << "Thank you for using this program." << endl;
+
                 return 0;
            }
 
            default: 
            {
                cout << "Please enter a number 1 - 5";
+               cout << endl;
+
                break;
            }
        }
