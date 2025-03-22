@@ -81,7 +81,8 @@ void depositToAcc(vector <Account>& accounts) {
            if (amount > 0) {
 
                accounts[i].deposit(amount);
-       
+
+               cout << endl;
                cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
                cout << endl;
            } 
@@ -121,7 +122,8 @@ void withdrawFromAcc(vector <Account>& accounts) {
            if (amount > 0) {
 
                accounts[i].withdraw(amount);
-       
+
+               cout << endl;
                cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
                cout << endl;
            } 
