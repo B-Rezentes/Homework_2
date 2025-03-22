@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <iomanip>
 
 #include "Account.h"
 
@@ -141,7 +142,7 @@ void displayAccounts(vector <Account> accounts){
       cout << "Name: " << accounts[i].getName() << endl;
       cout << "Balance: " << fixed << setprecision(2) << accounts[i].getBalance() << endl;
       cout << endl;
-      
+
    }
 }
 
