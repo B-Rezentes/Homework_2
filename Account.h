@@ -17,8 +17,6 @@ class Account{
 
       Account(string& name, float balance);
 
-      Account(const Account& other);
-
       ~Account();
 
       void setName(string name);
@@ -38,6 +36,5 @@ class Account{
       int getNextAccNumber();
 
 };
-
 
 #endif
