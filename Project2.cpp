@@ -30,7 +30,7 @@ int main() {
                 if (accounts.empty()) {
 
                     cout << "There are no accounts open." << endl;
-                    
+
                     break;
                 }
                 
@@ -78,7 +78,7 @@ int main() {
 
            case EXIT:
            {
-                cout << "Thank you for using this program." << endl;
+                cout << "Thank you for using this program." << endl << endl;
 
                 return 0;
            }

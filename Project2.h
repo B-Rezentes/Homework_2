@@ -21,6 +21,7 @@ void displaySchoolInfo() {
    cout << "|                  CSCE 1040                    |" << endl;
    cout << "|     Bmr0208 - Benjaminrezentes@my.unt.edu     |" << endl;
    cout << "+-----------------------------------------------+" << endl;
+   cout << endl;
 }
 
 void displayMenu() {
