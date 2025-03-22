@@ -34,12 +34,109 @@ void displayMenu() {
    cout << "-------> ";
 }
 
-void addNewAcc(vector <Account>& accounts);
+void addNewAcc(vector <Account>& accounts) {
+   string name;
+   float initialDeposit;
 
-void depositToAcc(vector <Account>& accounts);
+   cout << "Enter account holder's name: ";
+   getline(cin, name);
 
-void withdrawFromAcc(vector <Account>& accounts);
+   cout << "Enter initial deposit amount: $";
+   cin >> initialDeposit;
 
-void displayAccounts(vector <Account> accounts);
+   Account newAccount(name, initialDeposit);
 
+   accounts.push_back(newAccount);
+
+   cout << "New account created successfully." << endl;
+   cout << "Account holder: " << newAccount.getName() << endl;
+   cout << "Account number: " << newAccount.getAccNumber() << endl;
+   cout << "Balance: $" << fixed << setprecision(2) << newAccount.getBalance();
+}
+
+void depositToAcc(vector <Account>& accounts) {
+   int accNum;
+   string name;
+   float amount;
+   bool found = false;
+
+   cout << "Please enter your account number: ";
+   cin >> accNum;
+   cin.ignore();
+   cout << "Enter account holder's name: ";
+   getline(cin, name);
+
+   for (size_t i = 0; i < accounts.size(); i++) {
+      if (accounts[i].getAccNumber() == accNum && accounts[i].getName() == name) {
+           
+           found = true;
+
+           cout << "How much would you like to deposit: ";
+           cin >> amount;
+
+           if (amount > 0) {
+
+               accounts[i].deposit(amount);
+       
+               cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
+           } 
+
+           else {
+               cout << "Error: Deposit amount must be greater than zero." << endl;
+           }
+           return;
+      }
+   }
+
+   if (!found) {
+       cout << "Error: Account number not found or name does not match." << endl;
+   }
+}
+
+void withdrawFromAcc(vector <Account>& accounts) {
+   int accNum;
+   string name;
+   float amount;
+   bool found = false;
+
+   cout << "Please enter your account number: ";
+   cin >> accNum;
+   cin.ignore();
+   cout << "Enter account holder's name: ";
+   getline(cin, name);
+
+   for (size_t i = 0; i < accounts.size(); i++) {
+      if (accounts[i].getAccNumber() == accNum && accounts[i].getName() == name) {
+           
+           found = true;
+
+           cout << "How much would you like to withdraw: ";
+           cin >> amount;
+
+           if (amount > 0) {
+
+               accounts[i].withdraw(amount);
+       
+               cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
+           } 
+
+           else {
+               cout << "Error: Withdraw amount must be greater than zero." << endl;
+           }
+           return;
+      }
+   }
+
+   if (!found) {
+       cout << "Error: Account number not found or name does not match." << endl;
+   }
+
+}
+
+void displayAccounts(vector <Account> accounts){
+   
+   for (size_t i = 0; i < accounts.size(); i++) {
+       
+   }
+}
 #endif
