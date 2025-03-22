@@ -20,8 +20,6 @@ int main() {
 
            case OPEN:
            {
-                cin.ignore();
-
                 addNewAcc(accounts);
 
                 break;
@@ -78,6 +76,7 @@ int main() {
            case EXIT:
            {
                 cout << "Thank you for using this program." << endl;
+                return 0;
            }
 
            default: 
@@ -87,7 +86,4 @@ int main() {
            }
        }
    }while(choice != EXIT);    
-
-
-   return 0;
 }

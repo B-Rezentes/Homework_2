@@ -39,24 +39,22 @@ void addNewAcc(vector <Account>& accounts) {
    string name;
    float initialDeposit;
 
+   cin.ignore();
+
    cout << "Enter account holder's name: ";
    getline(cin, name);
 
    cout << "Enter initial deposit amount: $";
    cin >> initialDeposit;
 
-   cout << "Next Account Number: " << Account::getNextAccNumber() << endl;
-
    Account newAccount(name, initialDeposit);
 
    accounts.push_back(newAccount);
 
-   cout << "Number of accounts: " << accounts.size() << endl;
-
-   cout << "New account created successfully." << endl;
+   cout << "New account created successfully." << endl << endl;
    cout << "Account holder: " << newAccount.getName() << endl;
    cout << "Account number: " << newAccount.getAccNumber() << endl;
-   cout << "Balance: $" << fixed << setprecision(2) << newAccount.getBalance();
+   cout << "Balance: $" << fixed << setprecision(2) << newAccount.getBalance() << endl;
    cout << endl;
 }
 
@@ -85,6 +83,7 @@ void depositToAcc(vector <Account>& accounts) {
                accounts[i].deposit(amount);
        
                cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
+               cout << endl;
            } 
 
            else {
@@ -124,6 +123,7 @@ void withdrawFromAcc(vector <Account>& accounts) {
                accounts[i].withdraw(amount);
        
                cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
+               cout << endl;
            } 
 
            else {
@@ -141,11 +141,13 @@ void withdrawFromAcc(vector <Account>& accounts) {
 
 void displayAccounts(vector <Account> accounts){
    
+   cout << "Number of accounts: " << accounts.size() << endl;
+
    for (size_t i = 0; i < accounts.size(); i++) {
       
       cout << "Account: " << accounts[i].getAccNumber() << endl;
       cout << "Name: " << accounts[i].getName() << endl;
-      cout << "Balance: " << fixed << setprecision(2) << accounts[i].getBalance() << endl;
+      cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
       cout << endl;
 
    }

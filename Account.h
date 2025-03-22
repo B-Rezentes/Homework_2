@@ -15,7 +15,9 @@ class Account{
 
    public:
 
-      Account(string& name, float balance);
+      Account(const string& userName, float initialBalance);
+
+      Account(const Account& other);
 
       ~Account();
 

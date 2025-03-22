@@ -4,7 +4,7 @@
 
 int Account::nextAccNumber = 1000;
 
-Account::Account(string& userName, float initialBalance) {
+Account::Account(const string& userName, float initialBalance) {
 
    accNumber = new int;
 
@@ -15,6 +15,17 @@ Account::Account(string& userName, float initialBalance) {
    balance = initialBalance;
 
    nextAccNumber++;
+}
+
+Account::Account(const Account& other) {
+
+   accNumber = new int;
+
+   *accNumber = *other.accNumber;
+
+   name = other.name;
+
+   balance = other.balance;
 }
 
 Account::~Account() {
@@ -39,7 +50,7 @@ void Account::deposit(float amount) {
 
 void Account::withdraw(float amount) {
 
-      balance -= amount;
+   balance -= amount;
 }
 
 int Account::getAccNumber() const {
