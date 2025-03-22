@@ -20,7 +20,7 @@ int main() {
 
            case OPEN:
            {
-                addNewAcc;
+                addNewAcc(accounts);
 
                 break;
            }
