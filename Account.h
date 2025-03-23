@@ -7,18 +7,26 @@
 #define ACCOUNT_H
 
 #include <string>
-#include <iostream>
 
 using namespace std;
 
+// Class declaration 
+
 class Account{
+
    private:
+
       int* accNumber;
+
       string name;
+
       float balance;
+      
       static int nextAccNumber;
 
    public:
+
+      Account();
 
       Account(const string& userName, float initialBalance);
 

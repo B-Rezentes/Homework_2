@@ -16,7 +16,11 @@
 
 using namespace std;
 
+// Enumeration declaraton and definiton to use in main function
+
 enum options {OPEN = 1, DEPOSIT = 2, WITHDRAW = 3, DISPLAY = 4, EXIT = 5};
+
+// Function to display school info to the terminal
 
 void displaySchoolInfo() {
 
@@ -30,6 +34,8 @@ void displaySchoolInfo() {
    cout << endl;
 }
 
+// Function to display function menu to the user
+
 void displayMenu() {
 
    cout << "----------M E N U----------" << endl;
@@ -42,7 +48,10 @@ void displayMenu() {
    cout << "-------> ";
 }
 
+// Function that adds a new account using the vector created in the main function
+
 void addNewAcc(vector <Account>& accounts) {
+
    string name;
    float initialDeposit;
 
@@ -65,7 +74,10 @@ void addNewAcc(vector <Account>& accounts) {
    cout << endl;
 }
 
+// Function that depoits money into an account using the vector created in the main function
+
 void depositToAcc(vector <Account>& accounts) {
+
    int accNum;
    string name;
    float amount;
@@ -73,11 +85,14 @@ void depositToAcc(vector <Account>& accounts) {
 
    cout << "Please enter your account number: ";
    cin >> accNum;
+
    cin.ignore();
+
    cout << "Enter account holder's name: ";
    getline(cin, name);
 
    for (size_t i = 0; i < accounts.size(); i++) {
+
       if (accounts[i].getAccNumber() == accNum && accounts[i].getName() == name) {
            
            found = true;
@@ -95,6 +110,7 @@ void depositToAcc(vector <Account>& accounts) {
            } 
 
            else {
+
                cout << "Error: Deposit amount must be greater than zero." << endl;
            }
            return;
@@ -102,11 +118,13 @@ void depositToAcc(vector <Account>& accounts) {
    }
 
    if (!found) {
-       cout << "Error: Account number not found or name does not match." << endl;
+
+      cout << "Error: Account number not found or name does not match." << endl;
    }
 }
 
 void withdrawFromAcc(vector <Account>& accounts) {
+
    int accNum;
    string name;
    float amount;
@@ -114,11 +132,16 @@ void withdrawFromAcc(vector <Account>& accounts) {
 
    cout << "Please enter your account number: ";
    cin >> accNum;
+
    cin.ignore();
+
    cout << "Enter account holder's name: ";
    getline(cin, name);
 
+   // For loop checking every account to find one that matches name and number
+
    for (size_t i = 0; i < accounts.size(); i++) {
+
       if (accounts[i].getAccNumber() == accNum && accounts[i].getName() == name) {
            
            found = true;
@@ -134,19 +157,26 @@ void withdrawFromAcc(vector <Account>& accounts) {
                cout << "Balance: $" << fixed << setprecision(2) << accounts[i].getBalance() << endl;
                cout << endl;
            } 
-
+           
+           // Displaying error message if amount was less than 0
            else {
+
                cout << "Error: Withdraw amount must be greater than zero." << endl;
            }
            return;
       }
    }
 
+   // Displaying error message if account was not found
+
    if (!found) {
+
        cout << "Error: Account number not found or name does not match." << endl;
    }
 
 }
+
+// Function displaying every account in vector from main function
 
 void displayAccounts(vector <Account> accounts){
    

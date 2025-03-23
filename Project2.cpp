@@ -3,19 +3,22 @@
 // Bmr0208
 // Benjaminrezentes@my.unt.edu
 
-#include "Project2.h"
+#include "Project2.h"   
 #include <iostream>
-#include <iomanip>
 
 int main() {
 
-   displaySchoolInfo();
-   vector<Account> accounts;
-   int choice;
+    displaySchoolInfo();
 
-   choice = static_cast<options>(choice);
+    // Creating vector that will be used to store accounts
+    vector<Account> accounts;
 
-   do{
+    int choice;
+
+    //Transferring int to the enumeration type to use the switch case block
+    choice = static_cast<options>(choice);
+
+    do{
 
        displayMenu();
 
@@ -82,18 +85,20 @@ int main() {
            }
 
            case EXIT:
-           {
+           {    
+                // Meaningful message before exiting program
                 cout << endl << "Thank you for using this program." << endl << endl;
 
                 return 0;
            }
 
            default: 
-           {
-               cout << "Please enter a number 1 - 5";
-               cout << endl;
+           {    
+                // Message asking user to enter a number 1 - 5
+                cout << "Please enter a number 1 - 5";
+                cout << endl;
 
-               break;
+                break;
            }
        }
    }while(choice != EXIT);    

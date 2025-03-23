@@ -5,22 +5,38 @@
 
 #include "Account.h"
 #include <iostream>
-#include <iomanip>
+
+// Initializing static int to 100
 
 int Account::nextAccNumber = 1000;
 
+// Basic Public constructor
+
+Account::Account() {
+   name = "n/a";
+   balance = 0.00;
+}
+
+
+// Regular overload Account constructor
+
 Account::Account(const string& userName, float initialBalance) {
 
+   // Dynamically creating memory for accNumber
    accNumber = new int;
 
+   // Setting pointer to nextAccNumber value
    *accNumber = nextAccNumber;
 
    name = userName;
 
    balance = initialBalance;
 
+   // Incrementing nextAccNumber so the next account has a different number
    nextAccNumber++;
 }
+
+/* Copy constructor so when using dynamic memory in the program we can avoid shared memory or dangling pointers */
 
 Account::Account(const Account& other) {
 
@@ -33,10 +49,14 @@ Account::Account(const Account& other) {
    balance = other.balance;
 }
 
+// Public destructor to free up memory
+
 Account::~Account() {
 
    delete accNumber;
 }
+
+// Account mutator functions 
 
 void Account::setName(string name) {
 
@@ -57,6 +77,8 @@ void Account::withdraw(float amount) {
 
    balance -= amount;
 }
+
+// Account accessor functions
 
 int Account::getAccNumber() const {
 
